@@ -1,0 +1,102 @@
+<svg #svg viewBox="0 0 600 120" class="chart">
+  <g class="chart__helpline">
+    <path d="M 25,120 25,115"/>
+    <text x="23" y="112">1</text>
+
+    <path d="M 50,120 50,115"/>
+    <text x="48" y="112">2</text>
+
+    <path d="M 75,120 75,115"/>
+    <text x="73" y="112">3</text>
+
+    <path d="M 100,120 100,115"/>
+    <text x="98" y="112">4</text>
+
+    <path d="M 125,120 125,115"/>
+    <text x="123" y="112">5</text>
+
+    <path d="M 150,120 150,115"/>
+    <text x="148" y="112">6</text>
+
+    <path d="M 175,120 175,115"/>
+    <text x="173" y="112">7</text>
+
+    <path d="M 225,120 225,115"/>
+    <text x="223" y="112">8</text>
+
+    <path d="M 200,120 200,115"/>
+    <text x="198" y="112">9</text>
+
+    <path d="M 250,120 250,115"/>
+    <text x="246" y="112">10</text>
+
+    <path d="M 275,120 275,115"/>
+    <text x="271" y="112">11</text>
+
+    <path d="M 300,120 300,115"/>
+    <text x="296" y="112">12</text>
+
+    <path d="M 325,120 325,115"/>
+    <text x="321" y="112">13</text>
+
+    <path d="M 350,120 350,115"/>
+    <text x="346" y="112">14</text>
+
+    <path d="M 375,120 375,115"/>
+    <text x="371" y="112">15</text>
+
+    <path d="M 400,120 400,115"/>
+    <text x="396" y="112">16</text>
+
+    <path d="M 425,120 425,115"/>
+    <text x="421" y="112">17</text>
+
+    <path d="M 450,120 450,115"/>
+    <text x="446" y="112">18</text>
+
+    <path d="M 475,120 475,115"/>
+    <text x="471" y="112">19</text>
+
+    <path d="M 500,120 500,115"/>
+    <text x="496" y="112">20</text>
+
+    <path d="M 525,120 525,115"/>
+    <text x="521" y="112">21</text>
+
+    <path d="M 550,120 550,115"/>
+    <text x="546" y="112">22</text>
+
+    <path d="M 575,120 575,115"/>
+    <text x="571" y="112">23</text>
+  </g>
+
+  <g class="chart__legend">
+    <text stroke="red" x="10" y="15">OFF</text>
+    <text stroke="black" x="10" y="40">SB</text>
+    <text stroke="green" x="10" y="65">D</text>
+    <text stroke="orange" x="10" y="90">ON</text>
+  </g>
+
+  <g *ngIf="isShowDragLines" class="chart__drags">
+    <path (mousedown)="dragAndDrop($event, 'start')" stroke="green" stroke-width="3" fill="none" [attr.d]="startDragPosition"/>
+    <path (mousedown)="dragAndDrop($event, 'end')" stroke="green"  stroke-width="3" fill="none" [attr.d]="endDragPosition"/>
+  </g>
+
+  <path *ngFor="let line of lines; index as i"
+        #linesPath
+        id="line-{{i + 2}}"
+        class="chart__line"
+        fill="none"
+        stroke-width="4"
+        (click)="clickByLine($event)"
+        [attr.d]="line.d"
+        [attr.stroke]="line.color"/>
+  <path *ngFor="let line of lines; index as i"
+        id="helpline-{{i + 2}}"
+        class="chart__line-support"
+        fill="none"
+        stroke-width="1"
+        [attr.d]="line?.supportLine?.d"
+        [attr.stroke]="line?.supportLine?.color"/>
+</svg>
+

@@ -1,0 +1,42 @@
+.chart {
+  background: white;
+  width: 600px;
+  height: 120px;
+  border-left: 0.1px solid #555;
+  border-bottom: 0.1px solid #555;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  &__legend {
+    text {
+      font-size: 14px !important;
+    }
+  }
+
+  &__helpline {
+    path {
+      stroke: gray;
+      stroke-width: 1;
+      fill: none;
+    }
+
+    text {
+      font-size: 8px;
+    }
+  }
+
+  &__line {
+    cursor: pointer;
+  }
+
+  &__drags {
+    padding: 10px;
+    cursor: ew-resize;
+  }
+}
+
+.selected-line {
+  stroke-width: 8;
+}
+
+

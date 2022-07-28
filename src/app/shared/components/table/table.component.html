@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let data of this.eventService.updateData | async; index as i"
+      #tr
+      id="{{i + 2}}"
+      class="table__row"
+      (click)="setSelected(i + 2, true)">
+    <td>{{data.type}}
+      (<span [ngStyle]="{color: data.color}">{{data.shortType}}</span>)
+    </td>
+    <td>{{data.eventTimestampStart | date: 'yyyy-MM-dd HH:mm'}}</td>
+  </tr>
+</table>

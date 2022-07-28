@@ -1,0 +1,25 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: lightblue;
+}
+
+.table {
+  &__row {
+    cursor: pointer;
+  }
+}
+
+.selected {
+  background-color: lightskyblue;
+}
+
+td, thead, th {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #dddddd;
+}

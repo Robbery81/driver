@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "eventType": 1,
+    "eventCode": 3,
+    "eventTimestamp": "2020-11-19 05:00:00"
+  },
+  {
+    "id": 2,
+    "eventType": 1,
+    "eventCode": 2,
+    "eventTimestamp": "2020-11-19 06:20:00"
+  },
+  {
+    "id": 3,
+    "eventType": 1,
+    "eventCode": 4,
+    "eventTimestamp": "2020-11-19 12:04:00"
+  },
+  {
+    "id": 4,
+    "eventType": 1,
+    "eventCode": 3,
+    "eventTimestamp": "2020-11-19 12:23:00"
+  },
+  {
+    "id": 5,
+    "eventType": 1,
+    "eventCode": 1,
+    "eventTimestamp": "2020-11-19 23:16:00"
+  }
+]
